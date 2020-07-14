@@ -11,7 +11,7 @@ services:
      - "8888:8080"
     networks:
       app_net:
-        ipv4_address: 172.16.1.3
+        ipv4_address: 172.31.1.146
 
   postgres:
 # When building from source code, uncomment following build
@@ -22,12 +22,12 @@ services:
     tty: true
     networks:
       app_net:
-        ipv4_address: 172.16.1.2
+        ipv4_address: 172.31.1.146
 
 networks:
   app_net:
     ipam:
       driver: default
       config:
-       - subnet: "172.16.1.0/24"
+       - subnet: "172.31.1.146/24"
 
